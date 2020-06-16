@@ -1,0 +1,9 @@
+.delete-btn {
+    color: #888;
+    transition: transform 0.4s;
+
+    &:hover {
+        color: #333;
+        transform: scale(1.2);
+    }
+}
