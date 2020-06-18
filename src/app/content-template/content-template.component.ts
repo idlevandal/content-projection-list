@@ -11,6 +11,7 @@ export class ContentTemplateComponent implements OnInit {
 
   @Input() listItems: Array<any>;
 
+  @Output() onAddItem  = new EventEmitter<void>();
   @Output() onDeleteItem  = new EventEmitter<number>();
 
   constructor() { }
@@ -19,7 +20,11 @@ export class ContentTemplateComponent implements OnInit {
     //
   }
 
-  public deleteItem(index: number) {
+  public addItem(): void {
+    this.onAddItem.emit();
+  }
+
+  public deleteItem(index: number) {  
     this.onDeleteItem.emit(index);
   }
 
