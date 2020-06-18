@@ -1,9 +1,9 @@
-<div class="container mt-4">
+<div>
     <button (click)='addItem()' class="btn btn-outline-info float-right">Add Item</button>
     <h4>Content Template</h4>
 
-    <div style="width: 200px;" *ngFor="let item of listItems; index as i">
-        <span (click)='deleteItem(i)' class="float-right p-2 pointer delete-btn">x</span>
+    <div style="width: 300px;" *ngFor="let item of listItems; index as i">
+        <span (click)='deleteItem(i)' class="float-right px-2 pointer delete-btn">x</span>
 
         <ng-template
             [ngTemplateOutlet]="listItemTemplate"
